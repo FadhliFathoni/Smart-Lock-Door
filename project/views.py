@@ -4,7 +4,8 @@ from django.contrib.auth import login
 from .forms import LoginForm
 
 def loginView(request):
+    form = LoginForm(request.POST or None)
     context = {
-        "form":LoginForm
+        "form":form
     }
     return render(request,'login.html',context)
