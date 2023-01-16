@@ -8,3 +8,6 @@ class LoginForm(forms.ModelForm):
         help_texts = {
             'username': None,
         }
+        widgets = {
+            'password':forms.PasswordInput
+        }
